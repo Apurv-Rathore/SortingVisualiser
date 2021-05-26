@@ -1,6 +1,10 @@
 import React, { Component, useState } from "react";
 import "./Navbar.css";
 
+
+//algorithms
+
+
 const Navbar = ({ array, setArray }) => {
   const [sliderValue, setsliderValue] = useState(50);
   const handleChange = (evt) => {
@@ -36,5 +40,9 @@ const Navbar = ({ array, setArray }) => {
     </div>
   );
 };
+
+
+
+
 
 export default Navbar;
