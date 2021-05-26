@@ -9,7 +9,10 @@ const Main = () => {
     const width = Math.floor(1000/(array.length));
     return width;
   }
-
+  const getHeight = (number) => {
+    const height = Math.floor((number/Math.max(array))*500);
+    return height;
+  }
   return (
     <div>
       <Navbar array={array} setArray={setArray} />
@@ -22,6 +25,8 @@ const Main = () => {
             {{
                 width:{getWidth},
                 backgroundColor:"red",
+                height:{getHeight(number)},
+                  
             }}
           >
 
