@@ -1,0 +1,9 @@
+.ArrayContainer{
+    background-color: rgb(66, 145, 235) !important;
+    /* height: 100%; */
+    height: 88vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    
+}

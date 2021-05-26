@@ -1,4 +1,77 @@
 .navbar {
-    background-color: grey;
-    height: 40%;
+    background-color: rgb(45, 173, 216);
+    height: 12vh;
+    display: flex;
+    /* justify-content: center; */
+
+
+
 }
+
+button{
+    margin-top: 20px;
+    height: 50px;
+    margin-left: 20px;
+    /* background-color: #008CBA; */
+    border: none;
+    /* color: white; */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: 2px solid black; /* Green */
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #008CBA; /* Green */
+    color: white;
+}
+
+
+
+
+.slidecontainer {
+    margin-top: 30px;
+    height: 50px;
+    margin-left: 40px;
+    width: 300px; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
