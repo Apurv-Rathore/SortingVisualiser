@@ -7,6 +7,7 @@ const Main = () => {
 
   const getWidth = () => {
     const width = Math.floor(1000/(array.length));
+    return width;
   }
 
   return (
