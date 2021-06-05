@@ -9,7 +9,7 @@ import "./Main.css";
 //   }
 const Main = () => {
   const [array, setArray] = useState([344,5234,534,4234,345,345,234,24,324,534,3444,35,423,24,23,123,13]);
-
+  
   const getWidth = () => {
     const width = Math.floor(1000 / array.length);
     return width;
@@ -22,7 +22,6 @@ const Main = () => {
   };
   return (
     <div>
-        
       <Navbar array={array} setArray={setArray} />
       <div className="ArrayContainer" id="myDiv">
 
@@ -33,6 +32,7 @@ const Main = () => {
             style={{
               display:"inline-block",
               backgroundColor: "red",
+              
               height: `${getHeight(value)}px`,
               width: `${Math.floor((600)/(array.length))}px`,
               marginLeft: `${Math.floor((600)/(array.length))*0.5}px`,

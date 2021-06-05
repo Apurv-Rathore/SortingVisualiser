@@ -18,6 +18,7 @@ const Navbar = ({ array, setArray }) => {
 
   const generateNewArray = () => {
     setArray(generateArray(Math.floor((parseInt(sliderValue) + 3) * 1.25)));
+    console.log(array);
   }
 
   return (
