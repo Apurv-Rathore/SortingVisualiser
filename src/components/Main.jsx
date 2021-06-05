@@ -20,27 +20,11 @@ const Main = () => {
     123, 13,
   ]);
 
-  const [divStyle, setDivStyle] = useState({
-    backgroundColor: "red",
-  });
-
-  const setColor = () => {
-
-  }
-
-
-
-  const getWidth = () => {
-    const width = Math.floor(1000 / array.length);
-    return width;
-  };
-
 
   const isthis = (idx) =>{
-    if (idx===1 || idx===3){
+    if ( (colorChangeIndex.length==2) && (idx===colorChangeIndex[0] || idx===3)){
       return false;
     }
-    // console.log("fff");
     return true;
   }
 
