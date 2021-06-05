@@ -4,17 +4,6 @@ const mergeSort = ({ array, setArray, setColorChangeIndex }) => {
   //   console.log("orignal array",auxArray);
     let arrays = [];
     let indexes = [];
-    // for (let i = 0; i < len-1; i++) {
-    //   for (let j = 0; j < len-i-1; j++) {
-    //     if (auxArray[j] > auxArray[j+1]) {
-    //       temp = auxArray[j];
-    //       auxArray[j] = auxArray[j+1];
-    //       auxArray[j+1] = temp;
-        //   arrays.push([...auxArray]);
-        //   indexes.push([j,j+1]);
-    //     }
-    //   }
-    // }
     function partition(arr, start, end){
         // Taking the last element as the pivot
         const pivotValue = arr[end];
