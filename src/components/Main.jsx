@@ -37,7 +37,7 @@ const Main = () => {
               width: `${Math.floor((600)/(array.length))}px`,
               marginLeft: `${Math.floor((600)/(array.length))*0.5}px`,
             }}
-          >
+          > 
 {/* etrfx */}
           </div>
         ))}
