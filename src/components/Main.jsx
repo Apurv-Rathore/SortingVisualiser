@@ -28,8 +28,8 @@ const Main = () => {
               display:"inline-block",
               backgroundColor: "red",
               height: `${getHeight(value)}px`,
-              width: `${Math.floor((1000)/(array.length))}px`,
-              marginLeft: `${Math.floor((1000)/(array.length))*0.5}px`,
+              width: `${Math.floor((80)/(array.length))}vw`,
+              marginLeft: `${Math.floor((80)/(array.length))*0.5}vw`,
             }}
           >
 {/* etrfx */}
