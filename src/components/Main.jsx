@@ -19,9 +19,8 @@ const Main = () => {
     <div>
         
       <Navbar array={array} setArray={setArray} />
-      <div className="ArrayContainer">
+      <div className="ArrayContainer" >
         {array.map((value, idx) => (
-            
           <div
             className="array-bar"
             key={idx}
@@ -31,7 +30,6 @@ const Main = () => {
               height: `${getHeight(value)}px`,
               width: `${Math.floor((1000)/(array.length))}px`,
               marginLeft: `${Math.floor((1000)/(array.length))*0.5}px`,
-              
             }}
           >
 {/* etrfx */}
