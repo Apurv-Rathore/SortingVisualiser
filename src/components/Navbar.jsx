@@ -1,6 +1,7 @@
 import React, { Component, useState } from "react";
 import "./Navbar.css";
 
+import bubbleSort from "../algorithms/bubbleSort";
 
 //algorithms
 const Navbar = ({ array, setArray }) => {
@@ -24,7 +25,7 @@ const Navbar = ({ array, setArray }) => {
       <button>Merge Sort</button>
       <button>Quick Sort</button>
       <button>Insertion Sort</button>
-      <button>Bubble Sort</button>
+      <button onClick={()=> {bubbleSort({array,setArray})}}>Bubble Sort</button>
       <button>Selection Sort</button>
       <div className="slidecontainer">
         <input
