@@ -30,14 +30,7 @@ const Navbar = ({ array, setArray, setColorChangeIndex }) => {
     <div className="navbar">
       
       
-      <button
-        className="glow-on-hover"
-        onClick={() => {
-          mergeSort({ array, setArray, setColorChangeIndex });
-        }}
-      >
-        Merge Sort
-      </button>
+      
       <button
         className="glow-on-hover"
         onClick={() => {
@@ -61,6 +54,14 @@ const Navbar = ({ array, setArray, setColorChangeIndex }) => {
         }}
       >
         Bubble Sort
+      </button>
+      <button
+        className="glow-on-hover"
+        onClick={() => {
+          mergeSort({ array, setArray, setColorChangeIndex });
+        }}
+      >
+        Merge Sort
       </button>
       <button
         className="glow-on-hover"
