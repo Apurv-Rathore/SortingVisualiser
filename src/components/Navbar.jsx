@@ -5,6 +5,7 @@ import bubbleSort from "../algorithms/bubbleSort";
 import insertionSort from "../algorithms/insertionSort";
 import selectionSort from "../algorithms/selectionSort";
 import quickSort from "../algorithms/quickSort";
+import mergeSort from "../algorithms/mergeSort"
 
 //algorithms
 const Navbar = ({ array, setArray, setColorChangeIndex }) => {
@@ -26,7 +27,7 @@ const Navbar = ({ array, setArray, setColorChangeIndex }) => {
 
   return (
     <div className="navbar">
-      <button>Merge Sort</button>
+      <button onClick={()=> {mergeSort({array,setArray,setColorChangeIndex})}}>Merge Sort</button>
       <button onClick={()=> {quickSort({array,setArray,setColorChangeIndex})}}>Quick Sort</button>
       <button onClick={()=> {insertionSort({array,setArray,setColorChangeIndex})}}>Insertion Sort</button>
       <button onClick={()=> {bubbleSort({array,setArray,setColorChangeIndex})}}>Bubble Sort</button>

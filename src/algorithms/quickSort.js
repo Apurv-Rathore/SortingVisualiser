@@ -1,6 +1,5 @@
 const quickSort = ({ array, setArray, setColorChangeIndex }) => {
     const len = array.length;
-    let temp;
     let auxArray = [...array];
   //   console.log("orignal array",auxArray);
     let arrays = [];
@@ -30,8 +29,6 @@ const quickSort = ({ array, setArray, setColorChangeIndex }) => {
             pivotIndex++;
             }
         }
-        
-        // Putting the pivot value in the middle
         [arr[pivotIndex], arr[end]] = [arr[end], arr[pivotIndex]] 
         arrays.push([...arr]);
         indexes.push([end,pivotIndex]);
@@ -43,16 +40,13 @@ const quickSort = ({ array, setArray, setColorChangeIndex }) => {
         if (start >= end) {
             return;
         }
-
-        // Returns pivotIndex
         let index = partition(arr, start, end);
-
         // Recursively apply the same logic to the left and right subarrays
-        quickSort(arr, start, index - 1);
-        quickSort(arr, index + 1, end);
+        quickSortRecursive(arr, start, index - 1);
+        quickSortRecursive(arr, index + 1, end);
     }
 
-    quickSortRecursive(auxArray, 0, len-1)
+    quickSortRecursive(auxArray, 0, len-1);
     for (let index = 0; index < arrays.length; index++) {
       setTimeout(() => {
         setArray(arrays[index]);
