@@ -27,10 +27,11 @@ const Navbar = ({ array, setArray, setColorChangeIndex }) => {
 
   return (
     <div className="navbar">
-      <button onClick={()=> {mergeSort({array,setArray,setColorChangeIndex})}}>Merge Sort</button>
+      
       <button onClick={()=> {quickSort({array,setArray,setColorChangeIndex})}}>Quick Sort</button>
       <button onClick={()=> {insertionSort({array,setArray,setColorChangeIndex})}}>Insertion Sort</button>
       <button onClick={()=> {bubbleSort({array,setArray,setColorChangeIndex})}}>Bubble Sort</button>
+      <button onClick={()=> {mergeSort({array,setArray,setColorChangeIndex})}}>Merge Sort</button>
       <button onClick={()=> {selectionSort({array,setArray,setColorChangeIndex})}}>Selection Sort</button>
       <div className="slidecontainer">
         <input
