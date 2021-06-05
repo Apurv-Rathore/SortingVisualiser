@@ -1,3 +1,6 @@
+To check out the live website: visit this website : https://thelegend2710.github.io/SortingVisualiser/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
