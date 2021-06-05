@@ -6,9 +6,7 @@ import "./Navbar.css";
 const Navbar = ({ array, setArray }) => {
   const [sliderValue, setsliderValue] = useState(50);
   const handleChange = (evt) => {
-    console.log(Math.floor((parseInt(evt.target.value) + 3) * 1.25));
     setsliderValue(evt.target.value);
-    console.log(generateArray(Math.floor((parseInt(evt.target.value) + 3) * 1.25)));
     setArray(generateArray(Math.floor((parseInt(evt.target.value) + 3) * 1.25)));
   };
 
@@ -16,6 +14,10 @@ const Navbar = ({ array, setArray }) => {
     
     return  Array.from({length: len}, () => Math.floor(Math.random() * len));
   };
+
+  const generateNewArray = () => {
+    setArray(generateArray(Math.floor((parseInt(sliderValue) + 3) * 1.25)));
+  }
 
   return (
     <div className="navbar">
@@ -35,7 +37,7 @@ const Navbar = ({ array, setArray }) => {
           onChange={handleChange}
         />
       </div>
-      <button>Generate New Array </button>
+      <button onClick={generateNewArray}>Generate New Array </button>
     </div>
   );
 };
