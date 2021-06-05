@@ -13,6 +13,7 @@ const Navbar = ({ array, setArray }) => {
   };
 
   const generateArray = (len) => {
+    
     return  Array.from({length: len}, () => Math.floor(Math.random() * len));
   };
 
