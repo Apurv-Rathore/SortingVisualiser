@@ -1,4 +1,4 @@
-const bubbleSort = ({ array, setArray }) => {
+const bubbleSort = ({ array, setArray, setColorChangeIndex }) => {
   // for (let index = 0; index < 2; index++) {
   //     if (index===0){
   //         setTimeout(() => {
@@ -31,9 +31,14 @@ const bubbleSort = ({ array, setArray }) => {
   for (let index = 0; index < arrays.length; index++) {
     setTimeout(() => {
       setArray(arrays[index]);
-
+      setColorChangeIndex([...indexes[index]])
     }, (index * 700)/(len));
   }
+  setTimeout(() => {
+    setColorChangeIndex([])
+  }, (arrays.length * 700)/(len));
+  
+
   return arrays;
 };
 export default bubbleSort;
