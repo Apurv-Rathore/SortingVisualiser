@@ -14,8 +14,9 @@ const bubbleSort = ({ array, setArray }) => {
   const len = array.length;
   let temp;
   let auxArray = [...array];
-  console.log("orignal array",auxArray);
+//   console.log("orignal array",auxArray);
   let arrays = [];
+  let indexes = [];
   for (let i = 0; i < len-1; i++) {
     for (let j = 0; j < len-i-1; j++) {
       if (auxArray[j] > auxArray[j+1]) {
@@ -23,14 +24,14 @@ const bubbleSort = ({ array, setArray }) => {
         auxArray[j] = auxArray[j+1];
         auxArray[j+1] = temp;
         arrays.push([...auxArray]);
+        indexes.push([j,j+1]);
       }
     }
   }
-
-  
   for (let index = 0; index < arrays.length; index++) {
     setTimeout(() => {
       setArray(arrays[index]);
+
     }, (index * 700)/(len));
   }
 
