@@ -1,12 +1,15 @@
 import React, { Component, useState } from "react";
 import "./Navbar.css";
 
+
+//algorithms
 const Navbar = ({ array, setArray }) => {
   const [sliderValue, setsliderValue] = useState(50);
   const handleChange = (evt) => {
-    console.log(Math.floor((parseInt(evt.target.value) + 3) * 5));
+    console.log(Math.floor((parseInt(evt.target.value) + 3) * 1.25));
     setsliderValue(evt.target.value);
-    console.log(generateArray(Math.floor((parseInt(evt.target.value) + 3) * 5)));
+    console.log(generateArray(Math.floor((parseInt(evt.target.value) + 3) * 1.25)));
+    setArray(generateArray(Math.floor((parseInt(evt.target.value) + 3) * 1.25)));
   };
 
   const generateArray = (len) => {
@@ -35,5 +38,9 @@ const Navbar = ({ array, setArray }) => {
     </div>
   );
 };
+
+
+
+
 
 export default Navbar;

@@ -3,28 +3,39 @@ import Navbar from "../components/Navbar";
 
 import "./Main.css";
 const Main = () => {
-  const [array, setArray] = useState([6, 5, 4, 3, 2, 1]);
+  const [array, setArray] = useState([344,5234,534,4234,345,345,234,24,324,534,3444,35,423,24,23,123,13]);
 
   const getWidth = () => {
-    const width = Math.floor(1000/(array.length));
+    const width = Math.floor(1000 / array.length);
     return width;
-  }
+  };
   const getHeight = (number) => {
-    const height = Math.floor((number/Math.max(array))*500);
+    const height = Math.floor((number / Math.max.apply(Math, array)) * 500);
+    
+    // console.log(height, number, Math.max(array));
     return height;
-  }
+  };
   return (
     <div>
-      <Navbar array={array} setArray={setArray}/>
+        
+      <Navbar array={array} setArray={setArray} />
       <div className="ArrayContainer">
         {array.map((value, idx) => (
-            <div
-              className="array-bar"
-              key={idx}
-              style={{
-                backgroundColor: "red",
-                height: `${value}px`,
-              }}></div>
+            
+          <div
+            className="array-bar"
+            key={idx}
+            style={{
+              display:"inline-block",
+              backgroundColor: "red",
+              height: `${getHeight(value)}px`,
+              width: `${Math.floor((1000)/(array.length))}px`,
+              marginLeft: `${Math.floor((1000)/(array.length))*0.5}px`,
+              
+            }}
+          >
+{/* etrfx */}
+          </div>
         ))}
       </div>
     </div>
