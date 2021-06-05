@@ -15,23 +15,18 @@ const Main = () => {
   }
   return (
     <div>
-      <Navbar array={array} setArray={setArray} />
-      <div 
-      className="ArrayContainer"
-      >
-          {array.map((number) => {
-          <div className="arrayElement" 
-            style=
-            {{
-                width:{getWidth},
-                backgroundColor:"red",
-                height:{getHeight(number)},
-                  
-            }}
-          >
-
-          </div>
-      })}</div>
+      <Navbar array={array} setArray={setArray}/>
+      <div className="ArrayContainer">
+        {array.map((value, idx) => (
+            <div
+              className="array-bar"
+              key={idx}
+              style={{
+                backgroundColor: "red",
+                height: `${value}px`,
+              }}></div>
+        ))}
+      </div>
     </div>
   );
 };
