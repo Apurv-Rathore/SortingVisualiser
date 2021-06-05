@@ -22,7 +22,7 @@ const Main = () => {
 
 
   const isthis = (idx) =>{
-    if ( (colorChangeIndex.length==2) && (idx===colorChangeIndex[0] || idx===3)){
+    if ( (colorChangeIndex.length===2) && (idx===colorChangeIndex[0] || idx===colorChangeIndex[1])){
       return false;
     }
     return true;
@@ -30,7 +30,7 @@ const Main = () => {
 
   return (
     <div>
-      <Navbar array={array} setArray={setArray} />
+      <Navbar array={array} setArray={setArray} setColorChangeIndex={setColorChangeIndex}/>
       <div className="ArrayContainer" id="myDiv">
         {array.map((value, idx) => (
           // height: `${getHeight(value)}px`,
@@ -41,7 +41,7 @@ const Main = () => {
             style={{
               display: "inline-block",
               // backgroundColor: "red",
-              backgroundColor: `${ isthis(idx)?"blue":"red" }`,
+              backgroundColor: `${ isthis(idx)?"teal":"darkblue" }`,
               height: `${getHeight(value)}px`,
               width: `${Math.floor(600 / array.length)}px`,
               marginLeft: `${Math.floor(600 / array.length) * 0.5}px`

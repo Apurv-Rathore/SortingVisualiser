@@ -4,7 +4,7 @@ import "./Navbar.css";
 import bubbleSort from "../algorithms/bubbleSort";
 
 //algorithms
-const Navbar = ({ array, setArray }) => {
+const Navbar = ({ array, setArray, setColorChangeIndex }) => {
   const [sliderValue, setsliderValue] = useState(50);
   const handleChange = (evt) => {
     setsliderValue(evt.target.value);
@@ -26,7 +26,7 @@ const Navbar = ({ array, setArray }) => {
       <button>Merge Sort</button>
       <button>Quick Sort</button>
       <button>Insertion Sort</button>
-      <button onClick={()=> {bubbleSort({array,setArray})}}>Bubble Sort</button>
+      <button onClick={()=> {bubbleSort({array,setArray,setColorChangeIndex})}}>Bubble Sort</button>
       <button>Selection Sort</button>
       <div className="slidecontainer">
         <input
