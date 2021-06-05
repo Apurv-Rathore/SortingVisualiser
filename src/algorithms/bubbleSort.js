@@ -1,4 +1,7 @@
+import React, { Component, useState } from "react";
+
 const bubbleSort = ({array, setArray}) => {
+    const [auxarray, setAuxarray] = useState(array);
     // for (let index = 0; index < 2; index++) {
     //     if (index===0){
             // setTimeout(() => {
@@ -14,13 +17,14 @@ const bubbleSort = ({array, setArray}) => {
     const len = array.length;
     let temp;
     let counter = 0;
-    let aurarray = array;
+    // let aurarray = array;
     for(let i=0; i<len; i++) {
         for(let j=i+1; j<len; j++) {
             if(aurarray[i] > aurarray[j]) {
-                temp = aurarray[i];
-                aurarray[i] = aurarray[j];
-                aurarray[j] = temp;
+                // temp = aurarray[i];
+                // aurarray[i] = aurarray[j];
+                // aurarray[j] = temp;
+                
                 setTimeout(() => {
                     setArray(aurarray);    
                 }, 500*(counter));
