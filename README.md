@@ -1,4 +1,4 @@
-To check out the live website: visit this website : https://thelegend2710.github.io/SortingVisualiser/
+To check out the live website: visit this website : https://apurv-rathore.github.io/SortingVisualiser/
 
 The SortingVisualiser contains five different commonly used sorting algorithms along with the features of generating random arrays of different sizes.
 
